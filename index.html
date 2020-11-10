@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/my-favorites.html" class="my-favourites">My favorites</a>
+    <div class="wrapper">
+        <div id="search">
+            <app-select-box 
+            label="Select Category"
+            options='[{ "label": "Education", "key":"education" }, { "label": "Online Learning", "key":"online-learning" }, { "label": "Online Exam", "key":"online-exam" } ]'></app-select-box>
+            <app-button id="submit">Show</app-button>
+        </div>
+        <div id="cards">
+        </div>
+    </div>
+</body>
+</html>

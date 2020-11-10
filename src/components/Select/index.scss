@@ -1,0 +1,46 @@
+.custom-select {
+  display: flex;
+  position: relative;
+  flex: 1;
+  $root: &;
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 3px;
+    height: 35px;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  .list {
+    position: absolute;
+    list-style: none;
+    top: 35px;
+    flex-direction: column;
+    margin: 0;
+    border: 1px solid green;
+    background: #fff;
+    width: 100%;
+    padding: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    border-radius: 0 0 3px 3px;
+    display: none;;
+    &__item {
+      padding:10px;
+      color: gray;
+      cursor: pointer;
+    }
+  }
+  &--open {
+    #{$root}__wrapper {
+      border-radius: 3px 3px 0 0;
+      border-color: green;
+    }
+    .list {
+      display: flex;
+    }
+  }
+}
